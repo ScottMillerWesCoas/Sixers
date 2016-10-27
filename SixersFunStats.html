@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Sixers!</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+
+</head>
+<body>
+<div id='mod'>
+<h2 class='toph1'>DREAM SIXERS</h2>
+  <form class='inline' id='addPlayer' method='POST' action='/addPlayer'>
+    <h1 class='shimmer'>Add a New Sixer!</h1>
+    <input style='color: #000' class='change' type='text' name='name' placeholder='add player name'><br>
+    <input style='color: #000' class='change' type='text' name='ppg' placeholder='add player PPG'><br>
+    <input style='color: #000' class='change' type='text' name='rpg' placeholder='add player RPG'><br>
+    <input style='color: #000' class='change' type='text' name='apg' placeholder='add player APG'><br>
+    <input style='color: #000' class='change' type='text' name='pic' placeholder='add player pic link'><br>
+    <button style='color: white'>Add New Player</button>
+  </form>
+  <form class='inline' method='POST' action='/update'>
+    <h1 class='shimmer'>Update Stats!</h1>
+    <input style='color: #000' class='change' type='text' name='name' placeholder='name'><br>
+    <input style='color: #000' class='change' type='text' name='stat' placeholder='item to update'><br>
+    <input style='color: #000' class='change' type='text' name='newStat' placeholder='new data'><br>
+    <button style='color: white'>Update Data</button>
+  </form>
+  <br class='clearBoth' />
+</div>
+
+<form class='form' method='POST' action='/remove'>
+  <input style='color: #000' class='change' type='text' name='delName' placeholder='delete name'>
+  <button style='color: white'>Delete Player</button>
+</form>
+
+  <button id='realStats' style='color: white'>Go To Real-Time Stats!</button>
+
+ <div id="outer">
+
+
+ <script src="./funStats.js" ></script>
+</body>
+</html>
