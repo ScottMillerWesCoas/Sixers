@@ -1,0 +1,35 @@
+{
+  "name": "sixers",
+  "version": "1.0.0",
+  "description": "sixers dashboard",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScottMillerWesCoas/Sixers.git"
+  },
+  "keywords": [
+    "sixers",
+    "twitter",
+    "stats",
+    "articles",
+    "pics"
+  ],
+  "author": "Scott Miller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ScottMillerWesCoas/Sixers/issues"
+  },
+  "homepage": "https://github.com/ScottMillerWesCoas/Sixers#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cheerio": "^0.22.0",
+    "cookieparser": "^0.1.0",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.6",
+    "request": "^2.78.0"
+  }
+}
