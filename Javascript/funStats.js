@@ -2,7 +2,7 @@
  $(document).ready(function(){
     //Re-directs user to fun fake stats sixers page
     $('#realStats').click(function(){
-        window.location = './SixersRealStats.html'; 
+        window.location = '../views/SixersRealStats.html'; 
     }); 
     //Below removes CSS3 shimmer animation from text after a few seconds and replaces with simple color
     setTimeout(function(){

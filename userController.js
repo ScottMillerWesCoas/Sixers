@@ -1,9 +1,9 @@
 'use strict'
 var mongoose = require('mongoose'); 
-var User = require('./userModel'); 
-var Player = require('./playerModel'); 
+var User = require('./models/userModel'); 
+var Player = require('./models/playerModel'); 
 var path =require('path');
-var scraper = require('./scraper');  
+var scraper = require('./Javascript/scraper');  
 var fs = require('fs'); 
 
 var dataArr = scraper.getData(); //Initialize scrape immediately to avoid async issues
@@ -29,7 +29,7 @@ userController.addPlayer = function(req,res){
   Player.create(newPlayer, function(err, user){
     if (err) throw err;   
   });
-  res.redirect('./SixersFunStats.html');  
+  res.redirect('./views/SixersFunStats.html');  
 }; 
    
 userController.sendData = function(req, res){
@@ -60,7 +60,7 @@ userController.updateData = function(req, res){
       if(err) return handleError(err);
       //console.log(success); 
   }); 
-  res.redirect('./SixersFunStats.html'); 
+  res.redirect('./views/SixersFunStats.html'); 
 }; 
 
 userController.deletePlayer = function(req, res){
@@ -73,7 +73,7 @@ userController.deletePlayer = function(req, res){
         console.log("ERR: ", err); 
     }
   });
-  res.redirect('./SixersFunStats.html');  
+  res.redirect('./views/SixersFunStats.html');  
 }; 
 
 

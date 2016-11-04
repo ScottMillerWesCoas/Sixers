@@ -2,7 +2,7 @@
 $(document).ready(function(){
     //Head to real-time data scrape sixers page 
   $('#changeStats').click(function(){
-    window.location = './SixersFunStats.html'; 
+    window.location = '../views/SixersFunStats.html'; 
   }); 
    //AJAX CALL engages Scraper.js via server then userController, which pulls stats, articles and pictures from the web
   $.ajax({
