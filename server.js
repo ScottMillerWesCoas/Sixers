@@ -12,6 +12,8 @@ app.use(express.static(path.join(__dirname, './')));
 app.use(bodyParser.urlencoded({extended: true})); 
 app.use(cookieParser()); 
 
+//ADDED RE HEROKU DEPLOYMENT
+app.set('port', (process.env.PORT || 5000)); 
 
 //Send user to NBA.com/twitter/LibertyBallers.com scrape page
 app.get('/', function(req, res){
@@ -40,9 +42,9 @@ app.get('/data', userController.sendData);
 //Route when user wants to see real-time tweets/pics/stats on views/SixersRealStats.html
 app.get('/realData', userController.sendRealData); 
 
-
-app.listen(3076, function(){
-    console.log('you listenin\' on port 3076, obviously...'); 
+//CHANGED RE HEROKU DEPLOYMENT   
+app.listen(app.get('port'), function(){
+    console.log('you listenin\' on port', app.get('port')); 
 }); 
 
 module.exports = app; 

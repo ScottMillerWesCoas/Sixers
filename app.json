@@ -1,0 +1,5 @@
+{
+  "name":"Scott Miller's Sixers Dashboard", 
+  "description": "Scraping pics and stats from NBA.com, articles from LibertyBallers.com, and tweets and also allowing user to change stats, pics, players on different page",
+  "repository": "https://github.com/ScottMillerWesCoas/Sixers.git"
+}

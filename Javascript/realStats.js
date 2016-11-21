@@ -13,7 +13,7 @@ $(document).ready(function(){
         if (Array.isArray(el)){ 
           if (el[0][0] === 'h') { //pics are in nested array where each item is a string that starts with 'h' [['h']]
             el.forEach(function(inel){
-              $('#top').prepend("<img src=" + inel + " height='10%'>");   
+              $('#top').prepend("<img src=" + inel + " width='8%'>");   
             });  
           } else { //article links are objects in an array nested in the larger array - [[{}]]
             el.forEach(function(inel){
